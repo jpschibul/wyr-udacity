@@ -33,13 +33,13 @@ class QuestionPage extends Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
 function mapStateToProps({ authedUser, questions, users }, props) {
-  const { id } = props.match.params;
-  const question = questions[id];
+  const { id } = props.match.params
+  const question = questions[id]
   
 
       return {
@@ -47,4 +47,4 @@ function mapStateToProps({ authedUser, questions, users }, props) {
         isAnswered: (question.optionOne.votes.includes(authedUser) || question.optionTwo.votes.includes(authedUser))} : null,
     }
   }
-export default connect(mapStateToProps)(QuestionPage);
+export default connect(mapStateToProps)(QuestionPage)
